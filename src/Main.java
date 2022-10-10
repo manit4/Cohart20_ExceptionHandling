@@ -1,36 +1,118 @@
 import java.util.Scanner;
 
-public class Main {//This program is to handle the situation of previous code when I was dividing Numerator/Denominator....And Handling
-					//is done only with try and catch blocks
+public class Main {//This is another way to write code...
 	
 	public static void main(String[] args) {
 		
-		try {
-			
-			Scanner sc = new Scanner(System.in);
-			
-			System.out.println("Enter any number for Numerator!!");
-			
-			int numerator = sc.nextInt();
-			
-			System.out.println("Enter any number for Denominator!!");
-			
-			int denominator = sc.nextInt();
-			
-			int result = numerator/denominator;
-			
-			System.out.println("The Result is "+result);	
-		}	
-		catch (Exception e) {
-			
-			System.out.println("inside catch...");
-			
-			e.printStackTrace();
-			
-			main(null);
-		}
+		
+		int[] salaries = {4545, 66767, 1223};
+	
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Kindly give the index which you wish to access!!");
+		
+		int index = sc.nextInt();
+		
+		System.out.println(salaries[index]);
 	}
 }
+
+
+
+//public class Main {//This is another way to write code...
+//	
+//	public static void main(String[] args) {
+//		
+//		
+//		int[] salaries = {4545, 66767, 1223};
+//	
+//		System.out.println(salaries[0]);
+//		
+//		System.out.println(salaries[1]);
+//		
+//		System.out.println(salaries[2]);
+//		
+//		System.out.println(salaries[3]);//This statement is certainly problematic since the array size is 3, however you are trying to
+//										//access index outside its range or size since the last index you can access is 2 of array size 3
+//										//This is one more situation which runtime or Java can not handle and will end-up throwing
+//										//Exception on runtime...
+//	
+//	}
+//}
+
+
+
+//import java.util.Scanner;
+// 
+//public class Main {//This is another way to write code...
+//	
+//	public static void main(String[] args) {
+//		
+//		Main m = new Main();
+//		
+//		m.divideInputs();
+//	}
+//	
+//	void divideInputs() {
+//		
+//		try {
+//			Scanner sc = new Scanner(System.in);
+//			
+//			System.out.println("Kinldy Enter any Number from Numerator!!");
+//			
+//			int numerator = sc.nextInt();
+//			
+//			System.out.println("Kindly Enter any Number for denominator!!");
+//			
+//			int denominator = sc.nextInt();
+//			
+//			int result = numerator/denominator;
+//			
+//			System.out.println("The Result is "+result);	
+//		}
+//		catch (Exception e) {
+//			System.out.println("inside catch block...");
+//			e.printStackTrace();
+//			divideInputs();
+//		}	
+//	}
+//}
+
+
+
+//import java.util.Scanner;
+//
+//public class Main {//This program is to handle the situation of previous code when I was dividing Numerator/Denominator....And Handling
+//					//is done only with try and catch blocks
+//	
+//	public static void main(String[] args) {
+//		
+//		try {
+//			
+//			Scanner sc = new Scanner(System.in);
+//			
+//			System.out.println("Enter any number for Numerator!!");
+//			
+//			int numerator = sc.nextInt();
+//			
+//			System.out.println("Enter any number for Denominator!!");
+//			
+//			int denominator = sc.nextInt();
+//			
+//			int result = numerator/denominator;
+//			
+//			System.out.println("The Result is "+result);	
+//		}	
+//		catch (Exception e) {
+//			
+//			System.out.println("inside catch...");
+//			
+//			e.printStackTrace();
+//			
+//			main(null);
+//		}
+//	}
+//}
 
 
 
