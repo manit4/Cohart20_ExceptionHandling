@@ -1,21 +1,263 @@
 import java.util.Scanner;
 
-public class Main {//This is another way to write code...
+public class Main {//try block can be followed by multiple catch blocks..
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) {//Example of multiple catch blocks
 		
-		
-		int[] salaries = {4545, 66767, 1223};
-	
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("Kindly give the index which you wish to access!!");
-		
-		int index = sc.nextInt();
-		
-		System.out.println(salaries[index]);
+		try {
+			int[] marks = {56, 46, 78, 87};
+			
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.println("Enter the Numerator!!");
+			
+			int numerator = sc.nextInt();
+			
+			System.out.println("Enter the Denominator!!");
+			
+			int denominator = sc.nextInt();
+			
+			int result = numerator/denominator;
+			
+			System.out.println("The Result is "+result);
+			
+			System.out.println("Enter the index which you wish to access from the array!!");
+			
+			int index = sc.nextInt();
+			
+			System.out.println(marks[index]);	
+		}
+		catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("inside ArrayIndexOutOfBoundsException catch block...");
+			
+			e.printStackTrace();
+			main(null);
+		}
+		catch (ArithmeticException e) {
+			System.out.println("inside ArithmeticException catch block...");
+			e.printStackTrace();
+			main(null);
+		}
 	}
 }
+
+//import java.util.Scanner;
+//
+//public class Main {
+//	
+//	public static void main(String[] args) {
+//		
+//		try {
+//			int[] marks = {56, 46, 78, 87};
+//			
+//			Scanner sc = new Scanner(System.in);
+//			
+//			System.out.println("Enter the Numerator!!");
+//			
+//			int numerator = sc.nextInt();
+//			
+//			System.out.println("Enter the Denominator!!");
+//			
+//			int denominator = sc.nextInt();
+//			
+//			int result = numerator/denominator;
+//			
+//			System.out.println("The Result is "+result);
+//			
+//			System.out.println("Enter the index which you wish to access from the array!!");
+//			
+//			int index = sc.nextInt();
+//			
+//			System.out.println(marks[index]);	
+//		}
+//		catch (Exception e) {
+//			System.out.println("inside catch block...");
+//			
+//			e.printStackTrace();
+//			main(null);
+//		}
+//	}
+//}
+
+
+
+//import java.util.Scanner;
+//
+//public class Main {
+//	
+//	public static void main(String[] args) {
+//		
+//		int[] marks = {56, 46, 78, 87};
+//		
+//		Scanner sc = new Scanner(System.in);
+//		
+//		System.out.println("Enter the Numerator!!");
+//		
+//		int numerator = sc.nextInt();
+//		
+//		System.out.println("Enter the Denominator!!");
+//		
+//		int denominator = sc.nextInt();
+//		
+//		int result = numerator/denominator;
+//		
+//		System.out.println("The Result is "+result);
+//		
+//		System.out.println("Enter the index which you wish to access from the array!!");
+//		
+//		int index = sc.nextInt();
+//		
+//		System.out.println(marks[index]);
+//	}
+//}
+
+
+//import java.util.Scanner;
+//
+//public class Main {
+//	
+//	public static void main(String[] args) {
+//		
+//		try {
+//			int[] salaries = {3453, 4645, 6786};
+//			
+//			System.out.println(salaries[1]);
+//			
+//			System.out.println(salaries[4]);
+//		}
+//		catch (ArrayIndexOutOfBoundsException e) {//The Object of ArrayIndexOutOfBoundsException will be held by the reference variable of Reference Variable of 
+//										//ArrayIndexOutOfBoundsException class itself...
+//			System.out.println("inside catch block...");
+//			e.printStackTrace();
+//		}
+//		
+//	}
+//}
+
+
+
+//import java.util.Scanner;
+//
+//public class Main {
+//	
+//	public static void main(String[] args) {
+//		
+//		try {
+//			int i = 4/0;	
+//		}
+//		catch (ArithmeticException e) {//The Object of ArithmeticException will be held by the reference variable of Reference Variable of 
+//										//ArithmeticException class itself...
+//			System.out.println("inside catch block...");
+//			e.printStackTrace();
+//		}
+//		
+//	}
+//}
+
+
+
+//import java.util.Scanner;
+//
+//public class Main {
+//	
+//	public static void main(String[] args) {
+//		
+//		Main m = new Main();
+//		
+//		m.arrayAccess();
+//			
+//	}
+//	
+//	void arrayAccess() {
+//		
+//		try {
+//			
+//			int[] salaries = {4545, 66767, 1223};
+//			
+//			Scanner sc = new Scanner(System.in);
+//			
+//			System.out.println("Kindly give the index which you wish to access!!");
+//			
+//			int index = sc.nextInt();
+//			
+//			System.out.println(salaries[index]);
+//			
+//		}
+//		catch (Exception e) {
+//			System.out.println("inside catch block...");
+//			e.printStackTrace();
+//			
+//			main(null);
+//		}
+//	}
+//}
+
+
+
+
+
+
+
+
+
+
+//import java.util.Scanner;
+//
+//public class Main {
+//	
+//	public static void main(String[] args) {
+//		
+//		try {
+//		
+//			int[] salaries = {4545, 66767, 1223};
+//			
+//			Scanner sc = new Scanner(System.in);
+//			
+//			System.out.println("Kindly give the index which you wish to access!!");
+//			
+//			int index = sc.nextInt();
+//			
+//			System.out.println(salaries[index]);
+//			
+//		}
+//		catch (Exception e) {
+//			System.out.println("inside catch block...");
+//			e.printStackTrace();
+//			
+//			main(null);
+//		}	
+//	}
+//}
+
+
+
+
+
+
+
+
+
+
+
+//import java.util.Scanner;
+//
+//public class Main {//This is another way to write code...
+//	
+//	public static void main(String[] args) {
+//		
+//		
+//		
+//		int[] salaries = {4545, 66767, 1223};
+//	
+//		Scanner sc = new Scanner(System.in);
+//		
+//		System.out.println("Kindly give the index which you wish to access!!");
+//		
+//		int index = sc.nextInt();
+//		
+//		System.out.println(salaries[index]);
+//	}
+//}
 
 
 
