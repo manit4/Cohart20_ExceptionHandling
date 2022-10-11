@@ -1,27 +1,136 @@
 import java.io.File;
 import java.io.FileReader;
+import java.util.Scanner;
 
 //=================throws keyword start from here===================
 
 public class ExceptionHandling_02 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
-		try {
-			File f = new File("C:\\lasagna\\file1.txt");
+		
+			String filePath = "C:\\lasagna\\";
 			
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.println("Enter the file name from where you wish to read data!!");
+			
+			String fileName = sc.next();
+			
+			String completePath = filePath+fileName;
+
+			File f = new File(completePath);
+
 			FileReader reader = new FileReader(f);
-			
-			System.out.println((char)reader.read());	
-		}
-		catch(Exception e) {
-			System.out.println("inside catch...");
-			e.printStackTrace();
-		}
-		
-		
+
+			System.out.println((char)reader.read());
+				
 	}
 }
+
+
+//public class ExceptionHandling_02 {
+//
+//	public static void main(String[] args) {
+//		
+//		try {
+//			String filePath = "C:\\lasagna\\";
+//			
+//			Scanner sc = new Scanner(System.in);
+//			
+//			System.out.println("Enter the file name from where you wish to read data!!");
+//			
+//			String fileName = sc.next();
+//			
+//			String completePath = filePath+fileName;
+//
+//			File f = new File(completePath);
+//
+//			FileReader reader = new FileReader(f);
+//
+//			System.out.println((char)reader.read());	
+//		}
+//		catch (Exception e) {
+//			System.out.println("inside catch...");
+//			e.printStackTrace();
+//			
+//			main(null);
+//		}
+//		
+//				
+//	}
+//}
+
+
+//public class ExceptionHandling_02 {
+//
+//	public static void main(String[] args) {
+//		
+//		try {
+//			String filePath = "C:\\lasagna\\";
+//			
+//			Scanner sc = new Scanner(System.in);
+//			
+//			System.out.println("Enter the file name from where you wish to read data!!");
+//			
+//			String fileName = sc.next();
+//			
+//			String completePath = filePath+fileName;
+//
+//			File f = new File(completePath);
+//
+//			FileReader reader = new FileReader(f);
+//
+//			System.out.println((char)reader.read());	
+//		}
+//		catch (Exception e) {
+//			System.out.println("inside catch...");
+//			e.printStackTrace();
+//		}
+//		
+//				
+//	}
+//}
+
+
+
+//public class ExceptionHandling_02 {//This is the program in which I gave up to handle the undesired situation might arise on runtime
+//									//and would rather go for "throws" keyword. Throws keyword is used when you are not interested 
+//									//in handling problem which might arise on runtime....
+//
+//	public static void main(String[] args) throws Exception {
+//		
+//			File f = new File("C:\\lasagna\\file1.txt");
+//			
+//			FileReader reader = new FileReader(f);
+//			
+//			System.out.println((char)reader.read());		
+//	}
+//}
+
+
+
+
+//public class ExceptionHandling_02 {//This program is actually handling the code and the code-handling is done with the help of try
+//and catch blocks
+//
+//	public static void main(String[] args) {
+//		
+//		try {
+//			File f = new File("C:\\lasagna\\file1.txt");
+//			
+//			FileReader reader = new FileReader(f);
+//			
+//			System.out.println((char)reader.read());	
+//		}
+//		catch(Exception e) {
+//			System.out.println("inside catch...");
+//			e.printStackTrace();
+//		}
+//		
+//		
+//	}
+//}
 
 
 
