@@ -1,45 +1,72 @@
-import java.util.Scanner;
 
-public class Main {//try block can be followed by multiple catch blocks..
-	
-	public static void main(String[] args) {//Example of multiple catch blocks
-		
-		try {
-			int[] marks = {56, 46, 78, 87};
-			
-			Scanner sc = new Scanner(System.in);
-			
-			System.out.println("Enter the Numerator!!");
-			
-			int numerator = sc.nextInt();
-			
-			System.out.println("Enter the Denominator!!");
-			
-			int denominator = sc.nextInt();
-			
-			int result = numerator/denominator;
-			
-			System.out.println("The Result is "+result);
-			
-			System.out.println("Enter the index which you wish to access from the array!!");
-			
-			int index = sc.nextInt();
-			
-			System.out.println(marks[index]);	
-		}
-		catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("inside ArrayIndexOutOfBoundsException catch block...");
-			
-			e.printStackTrace();
-			main(null);
-		}
-		catch (ArithmeticException e) {
-			System.out.println("inside ArithmeticException catch block...");
-			e.printStackTrace();
-			main(null);
-		}
-	}
-}
+//In Exception handling, we have five keywords to learn named as "try", "catch", "finally", "throws", "throw"...
+
+//import java.util.Scanner;
+//
+//class Main {
+//	
+//	public static void main(String[] args) {
+//
+//		String s1 = "456";
+//		
+//		String s2 = "123";
+//		
+//		int num1 = Integer.parseInt(s1);
+//		
+//		int num2 = Integer.parseInt(s2);
+//		
+//		
+//		
+//		System.out.println(num1 + num2);
+//	}
+//	
+//
+//}
+
+
+
+//import java.util.Scanner;
+//
+//public class Main {//try block can be followed by multiple catch blocks..
+//	
+//	public static void main(String[] args) {//Example of multiple catch blocks
+//		
+//		try {
+//			int[] marks = {56, 46, 78, 87};
+//			
+//			Scanner sc = new Scanner(System.in);
+//			
+//			System.out.println("Enter the Numerator!!");
+//			
+//			int numerator = sc.nextInt();
+//			
+//			System.out.println("Enter the Denominator!!");
+//			
+//			int denominator = sc.nextInt();
+//			
+//			int result = numerator/denominator;
+//			
+//			System.out.println("The Result is "+result);
+//			
+//			System.out.println("Enter the index which you wish to access from the array!!");
+//			
+//			int index = sc.nextInt();
+//			
+//			System.out.println(marks[index]);	
+//		}
+//		catch (ArrayIndexOutOfBoundsException e) {
+//			System.out.println("inside ArrayIndexOutOfBoundsException catch block...");
+//			
+//			e.printStackTrace();
+//			main(null);
+//		}
+//		catch (ArithmeticException e) {
+//			System.out.println("inside ArithmeticException catch block...");
+//			e.printStackTrace();
+//			main(null);
+//		}
+//	}
+//}
 
 //import java.util.Scanner;
 //
