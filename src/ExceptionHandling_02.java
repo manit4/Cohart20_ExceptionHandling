@@ -2,31 +2,92 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.Scanner;
 
-//=================throws keyword start from here===================
+import com.cohart20.exceptions.LessThan17Exception;
+
+
+//=================throw======================
+//throw is the keyword used to manually throw an Exception
 
 public class ExceptionHandling_02 {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		
+		Scanner sc = new Scanner(System.in);
 		
-			String filePath = "C:\\lasagna\\";
-			
-			Scanner sc = new Scanner(System.in);
-			
-			System.out.println("Enter the file name from where you wish to read data!!");
-			
-			String fileName = sc.next();
-			
-			String completePath = filePath+fileName;
-
-			File f = new File(completePath);
-
-			FileReader reader = new FileReader(f);
-
-			System.out.println((char)reader.read());
+		System.out.println("Kindly enter you Age!!");
+		
+		int age = sc.nextInt();
+		
+		if(age < 18) {
+			throw new LessThan17Exception();
+		}
+		else {
+			System.out.println("You are Allowed..");
+		}
+		
+		System.out.println("First Statement");
+		
+		System.out.println("Second Statement");
 				
 	}
 }
+
+
+//public class ExceptionHandling_02 {
+//
+//	public static void main(String[] args) {
+//		
+//		System.out.println("first statement");
+//		
+//		System.out.println("second statement");
+//		
+//		System.out.println("third statement");
+//		
+//		//throw new ArithmeticException();
+//	
+//		//throw new ArrayIndexOutOfBoundsException();
+//		
+//		throw new StringIndexOutOfBoundsException();
+//		
+//				
+//	}
+//}
+
+
+
+
+
+
+
+
+
+//=================throws keyword start from here===================
+
+//public class ExceptionHandling_02 {
+//
+//	public static void main(String[] args) throws Exception {//throws keyword means that you are not interested in handling things or
+//															//in short you are saying that you do not care of the consequences might
+//															//arise on runtime in the form of Exception... 
+//		
+//		
+//			String filePath = "C:\\lasagna\\";
+//			
+//			Scanner sc = new Scanner(System.in);
+//			
+//			System.out.println("Enter the file name from where you wish to read data!!");
+//			
+//			String fileName = sc.next();
+//			
+//			String completePath = filePath+fileName;
+//
+//			File f = new File(completePath);
+//
+//			FileReader reader = new FileReader(f);
+//
+//			System.out.println((char)reader.read());
+//				
+//	}
+//}
 
 
 //public class ExceptionHandling_02 {
